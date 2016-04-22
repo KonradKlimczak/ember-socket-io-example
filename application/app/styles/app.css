@@ -1,0 +1,9 @@
+body {
+  padding-top: 50px;
+}
+.chat-messages {
+  padding: 40px 15px;
+}
+form.message {
+    text-align: center;
+}

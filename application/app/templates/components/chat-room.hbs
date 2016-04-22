@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row chat-messages">
+        <ul class="list-group">
+            {{#each listOfMessages as |message|}}
+                <li class="list-group-item"><b>{{message.author}}</b>: {{message.text}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="row">
+        <form class="form-inline messages">
+            <div class="form-group">
+                <label>Username</label>
+                {{input type="text" value=message.author class="form-control" placeholder="Bob"}}
+                <!--<input type="text" class="form-control" placeholder="Bob">-->
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                {{input type="text" value=message.text class="form-control"}}
+                <!--<input type="email" class="form-control">-->
+            </div>
+            <button type="submit" {{action submitAction}} class="btn btn-default">Send</button>
+        </form>
+    </div>
+</div>
